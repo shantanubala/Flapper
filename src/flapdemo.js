@@ -55,7 +55,7 @@ var FlapDemo = function(display_selector, input_selector, click_selector) {
     this.opts = {
         chars_preset: 'alphanum',
         align: 'left',
-        width: 120,
+        width: 70,
         on_anim_start: onAnimStart,
         on_anim_end: onAnimEnd
     };
@@ -92,7 +92,7 @@ var FlapDemo = function(display_selector, input_selector, click_selector) {
 FlapDemo.prototype = {
 
     cleanInput: function(text) {
-        return text.trim().toUpperCase();
+        return text.toUpperCase();
     },
 
     parseInput: function(text) {
@@ -100,10 +100,7 @@ FlapDemo.prototype = {
         var lines = text.split(/\n/);
 
         for (i in lines) {
-            var words = lines[i].split(/\s/);
-            for (j in words) {
-                buffer.pushWord(words[j]);
-            }
+                buffer.pushWord(lines[i]);
             buffer.flush();
         }
 
