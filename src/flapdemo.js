@@ -16,7 +16,7 @@ FlapBuffer.prototype = {
             this.buffers.push([]);
             this.cursor++;
             this.pushLine(line);
-        } 
+        }
     },
 
     pushWord: function(word) {
@@ -55,7 +55,7 @@ var FlapDemo = function(display_selector, input_selector, click_selector) {
     this.opts = {
         chars_preset: 'alphanum',
         align: 'left',
-        width: 20,
+        width: 120,
         on_anim_start: onAnimStart,
         on_anim_end: onAnimEnd
     };
@@ -153,4 +153,3 @@ $(document).ready(function(){
     new FlapDemo('input.display', '#typesomething', '#showme');
 
 });
-
